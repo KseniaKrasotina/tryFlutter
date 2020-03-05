@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.orange,
       ),
-      home: new MyTableData(title: 'my first flutter app',),
+      home: new MyTableData(title: 'Game Points',),
     );
   }
 }
@@ -36,25 +36,64 @@ class _MyTableDataState  extends State<MyTableData>{
   }
 
   Widget playerData() => DataTable(
+    columnSpacing: 10.0,
     columns: <DataColumn>[
       DataColumn(
           label: Text('Player'),
           numeric: false,
       ),
       DataColumn(
-        label: Text('1 raund'),
+          label: Text('1 raund'),
           numeric: false,
       ),
       DataColumn(
-        label: Text('2 raund'),
-        numeric: false,
+          label: Text('2 raund'),
+          numeric: false,
       ),
       DataColumn(
-        label: Text('3 raund'),
+          label: Text('3 raund'),
+          numeric: false,
+      ),
+      DataColumn(
+        label: Text('Game Results'),
         numeric: false,
       )
     ],
-    rows: <DataRow>[],
+    rows: <DataRow>[
+      DataRow(
+        cells: <DataCell>[
+          DataCell(Text("Polina")),
+          DataCell(Text("12")),
+          DataCell(Text("22")),
+          DataCell(Text("22")),
+          DataCell(Text("22")),
+
+
+        ]
+      ),
+      DataRow(
+          cells: <DataCell>[
+            DataCell(Text("Mama")),
+            DataCell(Text("12")),
+            DataCell(Text("22")),
+            DataCell(Text("22")),
+            DataCell(Text("22")),
+
+
+          ]
+      ),
+      DataRow(
+          cells: <DataCell>[
+            DataCell(Text("Papa")),
+            DataCell(Text("12")),
+            DataCell(Text("22")),
+            DataCell(Text("22")),
+            DataCell(Text("22")),
+
+
+          ]
+      )
+    ],
   );
 
   @override
